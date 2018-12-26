@@ -16,8 +16,8 @@
 .Home {
   width: 100%;
   height: 100vh;
-  background-image: url('http://www.selfgrowth.info/photos/cool-space-photos/space-templates-creative-common1680.jpg');
-  background-size: cover;
+  background: rgb(39, 109, 150);
+  background-size: fill;
   z-index: 0;
   .Head {
     display: flex;
@@ -40,9 +40,8 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 17%;
       height: 70%;
-      background: yellow;
+      background: rgba(187, 224, 245, 0.527);
       #aaron_estes {
         font-size: 3em;
         font-weight: bold;
@@ -60,23 +59,21 @@
     justify-content: center;
     align-items: center;
     align-content: center;
+    font-size: 3em;
   }
-  
+
   .Display_About {
     padding-top: 10px;
     width: 90vw;
     height: 22vh;
-    background: rgb(182, 167, 169);
-    z-index: 100000;
-    position: fixed;
+    background: rgba(24, 23, 23, 0.596);
     display: flex;
     flex-wrap: wrap;
     margin-left: 75px;
-    h1 {
-      z-index: 5;
-      color: white;
-    }
+    margin-top: 10vh;
+    margin-bottom: 5vh;
     p {
+      color: white;
       font-weight: bold;
       font-size: 2em;
       font-family: 'comfortaa';
@@ -91,36 +88,54 @@
   }
 
   .Display_Projects {
-    width: 98%;
+    width: 100%;
     min-height: 62%;
-    background: white;
+    background: rgb(39, 109, 150);
     z-index: 30;
-    margin-top: 35vh;
-    margin-left: 1vw;
+    margin-top: 15vh;
     .header {
       display: flex;
-      justify-content: space-around;
-      #harryp {
-        font-family: 'harryp';
-        font-size: 5em;
-        margin: 0;
-      position: sticky;
-      background: rgb(182, 167, 169);
-      width: 54%;
+      .Name_Of_Project_and_Website {
+        width: 50vw;
+        display: flex;
+        h1 {
+          font-family: 'stein';
+        }
+        a {
+          color: black;
+          align-content: center;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          margin-left: 10px;
+        }
       }
-      h1 {
-      width: 54%;
-      font-family: 'stein';
-      margin: 0;
-      position: sticky;
-      background: rgb(182, 167, 169);
+      .Name_Of_GroupProject_and_Website {
+        display: flex;
+        width: 62%;
+        margin-right: 0;
+        #harryp {
+          font-family: 'harryp';
+          font-size: 5em;
+          margin: 0;
+          position: sticky;
+          width: 54%;
+        }
+        a {
+          color: black;
+          margin-left: 10px;
+          display: flex;
+          align-items: center;
+        }
+      }
     }
-    h2 {
-      background: rgb(182, 167, 169);
-      margin: 0;
-      width: 50%;
-    }}
-    
+
+    .spacing {
+      width: 100vw;
+      height: 5vh;
+      background-image: url('http://www.selfgrowth.info/photos/cool-space-photos/space-templates-creative-common1680.jpg');
+    }
+
     .project_area {
       display: flex;
       width: 100%;
@@ -129,28 +144,30 @@
         background-size: cover;
         max-width: 50%;
         max-height: 60vh;
-        margin-left: 0.5vw;
       }
       .project_info {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        background: green;
+        justify-content: space-evenly;
         font-size: 2em;
         p {
           margin-left: 10px;
-          
         }
         li {
+          color: white;
           margin-left: 1vw;
           margin-bottom: 1vh;
-          background: yellow;
+          background: rgba(24, 23, 23, 0.596);
           list-style-position: outside;
           display: table-row;
         }
       }
     }
   }
- 
-  
+}
+
+#group_project_due_date {
+  display: flex;
+  margin-left: -180px;
 }

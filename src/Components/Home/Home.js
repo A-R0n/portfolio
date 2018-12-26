@@ -52,6 +52,7 @@ class Home extends Component {
         </div>
         <h1 className='about_me'>About Me</h1>
        <About />
+       <h1 className='about_me'>Projects</h1>
        <Projects />
       </div>
     );
