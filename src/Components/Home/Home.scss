@@ -42,6 +42,7 @@
       justify-content: center;
       height: 70%;
       background: rgba(187, 224, 245, 0.527);
+      width: 71%;
       #aaron_estes {
         font-size: 3em;
         font-weight: bold;
@@ -49,7 +50,30 @@
       #dallas_tx {
         font-size: 2em;
       }
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        #node, #js {
+          margin-left: 30vw;
+        }
+        #node,
+        #react,
+        #aws,
+        #d3,
+        #firebase,
+        #js,
+        #py
+         {
+          display: flex;
+          margin-top: 0;
+          z-index: 10000;
+          width: 120px;
+          height: 120px;
+        }
+      }
     }
+    
+    
   }
 
   .about_me {
@@ -70,7 +94,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: 75px;
-    margin-top: 10vh;
+    margin-top: 5vh;
     margin-bottom: 5vh;
     p {
       color: white;
@@ -92,7 +116,7 @@
     min-height: 62%;
     background: rgb(39, 109, 150);
     z-index: 30;
-    margin-top: 15vh;
+    margin-top: 5vh;
     .header {
       display: flex;
       .Name_Of_Project_and_Website {
