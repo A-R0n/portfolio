@@ -1,0 +1,156 @@
+@font-face {
+  font-family: 'comfortaa';
+  src: url('../../Comfortaa-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'stein';
+  src: url('../../SteinAntik.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'harryp';
+  src: url('../../HARRYP__.TTF') format('truetype');
+}
+
+.Home {
+  width: 100%;
+  height: 100vh;
+  background-image: url('http://www.selfgrowth.info/photos/cool-space-photos/space-templates-creative-common1680.jpg');
+  background-size: cover;
+  z-index: 0;
+  .Head {
+    display: flex;
+    .Avi {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      z-index: 1;
+      margin-top: 25px;
+      margin-left: 50px;
+      background-image: url('https://avatars1.githubusercontent.com/u/40615038?s=460&v=4');
+      background-size: cover;
+      border: 2px solid black;
+    }
+    .Head_Column {
+      margin-top: 5vh;
+      margin-left: 2vw;
+      color: black;
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 17%;
+      height: 70%;
+      background: yellow;
+      #aaron_estes {
+        font-size: 3em;
+        font-weight: bold;
+      }
+      #dallas_tx {
+        font-size: 2em;
+      }
+    }
+  }
+
+  .about_me {
+    z-index: 5;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  
+  .Display_About {
+    padding-top: 10px;
+    width: 90vw;
+    height: 22vh;
+    background: rgb(182, 167, 169);
+    z-index: 100000;
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 75px;
+    h1 {
+      z-index: 5;
+      color: white;
+    }
+    p {
+      font-weight: bold;
+      font-size: 2em;
+      font-family: 'comfortaa';
+    }
+    #p_one {
+      margin-top: 0;
+      margin-left: 5vw;
+    }
+    #p_two {
+      margin-top: -30px;
+    }
+  }
+
+  .Display_Projects {
+    width: 98%;
+    min-height: 62%;
+    background: white;
+    z-index: 30;
+    margin-top: 35vh;
+    margin-left: 1vw;
+    .header {
+      display: flex;
+      justify-content: space-around;
+      #harryp {
+        font-family: 'harryp';
+        font-size: 5em;
+        margin: 0;
+      position: sticky;
+      background: rgb(182, 167, 169);
+      width: 54%;
+      }
+      h1 {
+      width: 54%;
+      font-family: 'stein';
+      margin: 0;
+      position: sticky;
+      background: rgb(182, 167, 169);
+    }
+    h2 {
+      background: rgb(182, 167, 169);
+      margin: 0;
+      width: 50%;
+    }}
+    
+    .project_area {
+      display: flex;
+      width: 100%;
+      .personal_project_pic {
+        background-image: url('http://rrg-climbing-pics.s3-website-us-east-1.amazonaws.com/d90d1ab6-4570-407f-a2c8-c1f0049b5c35_ScreenShot2018-12-25at3.42.27PM.png');
+        background-size: cover;
+        max-width: 50%;
+        max-height: 60vh;
+        margin-left: 0.5vw;
+      }
+      .project_info {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background: green;
+        font-size: 2em;
+        p {
+          margin-left: 10px;
+          
+        }
+        li {
+          margin-left: 1vw;
+          margin-bottom: 1vh;
+          background: yellow;
+          list-style-position: outside;
+          display: table-row;
+        }
+      }
+    }
+  }
+ 
+  
+}
