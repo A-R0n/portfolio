@@ -46,7 +46,7 @@ class Home extends Component {
           <div className="Head_Column">
             <div id="aaron_estes">Aaron Estes</div>
             <div id="dallas_tx">Dallas, TX</div>
-            <div>aestescc@gmail.com</div>
+            <div id='email'>aestescc@gmail.com</div>
             <div className="skills">
               <img
                 id="node"

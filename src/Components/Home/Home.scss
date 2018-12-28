@@ -42,14 +42,21 @@
       justify-content: center;
       height: 70%;
       width: 71%;
+      
       #aaron_estes {
         font-size: 3em;
         font-weight: bold;
-        background: yellow;
-        width: 22vw;
+        // background: yellow;
+        width: 17vw;
       }
       #dallas_tx {
         font-size: 2em;
+        // background: yellow;
+        width: 9vw;
+      }
+      #email {
+        // background: yellow;
+        width: 10vw;
       }
       .skills {
         display: flex;
