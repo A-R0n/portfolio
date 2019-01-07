@@ -19,6 +19,7 @@
   background: rgb(39, 109, 150);
   background-size: fill;
   z-index: 0;
+  
   .Head {
     display: flex;
     .Avi {
@@ -56,7 +57,7 @@
       }
       #email {
         // background: yellow;
-        width: 10vw;
+        width: 12vw;
       }
       .skills {
         display: flex;
@@ -89,6 +90,12 @@
     
   }
 
+  .blue {
+    height: 15vh;
+    background: rgb(39, 109, 150);
+    margin-top: -50px;
+  }
+
   .about_me {
     z-index: 5;
     color: white;
@@ -99,39 +106,55 @@
     font-size: 3em;
   }
 
+  .projects {
+    margin-bottom: 0vh;
+    margin-top: -10px;
+    z-index: 5;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-size: 3em;
+    background: rgb(39, 109, 150);
+  }
+  .wrapper {
+    display: flex;
+    justify-content: center;
   .Display_About {
     padding-top: 10px;
     width: 90vw;
-    height: 22vh;
     background: rgba(24, 23, 23, 0.596);
     display: flex;
     flex-wrap: wrap;
-    margin-left: 75px;
+    // margin-left: 75px;
     margin-top: 5vh;
-    margin-bottom: 5vh;
-    p {
+    // margin-bottom: 10vh;
+    div {
       color: white;
       font-weight: bold;
       font-size: 2em;
       font-family: 'comfortaa';
     }
     #p_one {
-      margin-top: 0;
-      margin-left: 5vw;
+      // margin-top: 0;
+      // margin-left: 5vw;
     }
     #p_two {
-      margin-top: -30px;
+      // margin-top: -30px;
     }
   }
+}
 
   .Display_Projects {
     width: 100%;
-    min-height: 62%;
     background: rgb(39, 109, 150);
     z-index: 30;
-    margin-top: 5vh;
+   
+    
     .header {
       display: flex;
+      
       .Name_Of_Project_and_Website {
         width: 50vw;
         display: flex;
@@ -170,17 +193,23 @@
     .spacing {
       width: 100vw;
       height: 5vh;
-      background-image: url('http://www.selfgrowth.info/photos/cool-space-photos/space-templates-creative-common1680.jpg');
+      background: rgb(39, 109, 150);
+      border-bottom: 2px solid black;
     }
 
     .project_area {
       display: flex;
+      // flex-direction: column;
       width: 100%;
       .personal_project_pic {
         background-image: url('http://rrg-climbing-pics.s3-website-us-east-1.amazonaws.com/d90d1ab6-4570-407f-a2c8-c1f0049b5c35_ScreenShot2018-12-25at3.42.27PM.png');
         background-size: cover;
-        max-width: 50%;
-        max-height: 60vh;
+        max-width: 40%;
+        max-height: 50vh;
+      }
+      #iphoneX {
+        width: 300px;
+        height: 500px;
       }
       .project_info {
         display: flex;
