@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Home.scss';
 import About from '../About/About';
 import Projects from '../Projects/Projects';
-import Quotes from '../Quotes/Quotes';
+import { Link } from 'react-router-dom'
 
 class Home extends Component {
   constructor(props) {
@@ -44,7 +44,9 @@ class Home extends Component {
         <div className="Head">
           <div className="Avi" />
           <div className="Head_Column">
-            <div id="aaron_estes">Aaron Estes</div>
+            <div className='nav_bar'>
+              <div id="aaron_estes">Aaron Estes</div>
+            </div>
             <div id="dallas_tx">Dallas, TX</div>
             <div id="email">aestescc@gmail.com</div>
             <div id="email">github.com/A-R0n</div>
@@ -104,12 +106,12 @@ class Home extends Component {
           </div>
         </div>
         <h1 className="about_me">About Me</h1>
-        <div className='wrapper'>
+        <div className="wrapper">
           <About />
         </div>
-        <div className='blue'></div>
+        <div className="blue" />
         <h1 className="projects">Projects</h1>
-        <div className='blue'></div>
+        <div className="blue" />
         <Projects />
       </div>
     );
