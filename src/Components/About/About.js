@@ -10,11 +10,10 @@ class About extends Component {
           Economics
         </div>
         <div id="p_two">
-          and Religious Studies, I decided to expand my skills further studying
-          computer programming. After discovering that computer science was a
-          unique struggle that I was passionate about, I decided to attend
+          and Religious Studies, I decided to expand my skills further by getting into
+          computer programming. My close friends encouraged me to read "Automate The Boring Stuff With Python" which lead me to attend
           DevMountain's full-stack web development bootcamp. Now, my
-          goal is to apply these skills in the workplace and increase the productivity of a team.
+          goal is to apply these skills in the workplace and to continue getting better.
         </div>
       </div>
     );
