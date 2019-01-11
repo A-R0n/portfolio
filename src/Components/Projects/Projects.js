@@ -19,11 +19,13 @@ class Projects extends Component {
             alt="rrgclimb"
           />
           <img
-            id='iphoneX'
+            id="iphoneX"
             src="http://rrg-climbing-pics.s3-website-us-east-1.amazonaws.com/fe917e2d-76ad-4661-bb1a-a029d2656b9f_ScreenShot2019-01-07at2.09.29PM.png"
             alt="iphoneX"
           />
-          <div className="project_info">
+        </div>
+        <div className="outer_div">
+          <div className="project_info_personal">
             <li>
               {' '}
               Rock climbers now have the ability to find routes at the Red River
@@ -59,14 +61,17 @@ class Projects extends Component {
         <div className="project_area">
           <img
             src="http://rrg-climbing-pics.s3-website-us-east-1.amazonaws.com/4f070ab2-035a-4847-93d3-d96148ac441a_ScreenShot2018-12-25at7.33.00PM.png"
-            className="personal_project_pic"
+            className="group_project_pic"
             alt="harrypsocial"
           />
-          <div className="project_info">
+        </div>
+        <div className="outer_div">
+          <div className="project_info_personal">
             <li>
               {' '}
               Aspiring wizards are now able to attend Hogwarts School of
-              Witchcraft and Wizardry after signing up and taking Sorting Hat Quiz.
+              Witchcraft and Wizardry after signing up and taking Sorting Hat
+              Quiz.
             </li>
             <li>
               {' '}
