@@ -8,7 +8,7 @@ class Projects extends Component {
         <div className="header">
           <div className="Name_Of_Project_and_Website">
             <h1>Rock Cimbing Journal</h1>
-            <a href="http://www.rrgclimb.com">www.rrgclimb.com</a>
+            <a href="http://www.rrgclimb.com">rrgclimb.com</a>
           </div>
           <h2>November 2018 - Current</h2>
         </div>
@@ -60,17 +60,18 @@ class Projects extends Component {
         </div>
         <div className="project_area">
           <img
-            src="http://rrg-climbing-pics.s3-website-us-east-1.amazonaws.com/4f070ab2-035a-4847-93d3-d96148ac441a_ScreenShot2018-12-25at7.33.00PM.png"
+            src="http://rrg-climbing-pics.s3-website-us-east-1.amazonaws.com/f6562a2a-5e62-4780-9d5e-d9e26e4eaeb7_ScreenShot2019-01-11at11.08.47AM.png"
             className="group_project_pic"
             alt="harrypsocial"
           />
+          <img id='iphoneX' src='http://rrg-climbing-pics.s3-website-us-east-1.amazonaws.com/1d192504-8574-4dbd-8dfb-0d1a55159272_ScreenShot2019-01-11at11.15.33AM.png'></img>
         </div>
         <div className="outer_div">
           <div className="project_info_personal">
             <li>
               {' '}
               Aspiring wizards are now able to attend Hogwarts School of
-              Witchcraft and Wizardry after signing up and taking Sorting Hat
+              Witchcraft and Wizardry after signing up and taking the Sorting Hat
               Quiz.
             </li>
             <li>
@@ -85,7 +86,7 @@ class Projects extends Component {
             </li>
             <li>
               {' '}
-              Click on the golden snitch as it flies across the screen to earn
+              Click on the golden snitch, animated with CSS, as it flies across the screen to earn
               house points.
             </li>
             <li> Material UI implemented to make navigation more efficient.</li>

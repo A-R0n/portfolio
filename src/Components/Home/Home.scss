@@ -80,6 +80,7 @@
     align-items: center;
     align-content: center;
     font-size: 3em;
+   
   }
 
   .projects {
@@ -92,6 +93,7 @@
     align-items: center;
     align-content: center;
     font-size: 3em;
+    font-weight: bold;
     
   }
   .wrapper {
@@ -220,7 +222,7 @@
   margin-bottom: 0;
   padding-top: 150px;
   padding-bottom: 100px;
-  // margin: 0;
+  font-size: 3em;
   display: flex;
   justify-content: center;
   background: rgba(214, 211, 211, 0.671);
@@ -229,15 +231,15 @@
 .skills_container {
   background: rgba(214, 211, 211, 0.671);
   display: flex;
+  flex-wrap: nowrap;
+ 
   justify-content: center;
   border: 1px solid black;
+  
   .skills {
-    
     display: flex;
-    flex-wrap: wrap;
     width: 75vw;
-    margin-bottom: 30vh;
-    justify-content: center;
+    height: 60vh;
     align-items: center;
     #node,
     #react,
