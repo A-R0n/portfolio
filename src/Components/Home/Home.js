@@ -41,16 +41,19 @@ class Home extends Component {
   };
 
   toAbout = () => {
-    window.scrollBy(0,400);
-  }
+    let elem = document.getElementById("about_me");
+    elem.scrollIntoView({block: "start", behavior: "smooth"});
+  };
 
   toProjects = () => {
-    window.scrollBy(0,1050);
-  }
+    let elem = document.getElementById("projects");
+    elem.scrollIntoView({block: "start", behavior: "smooth"});
+  };
 
   toSkills = () => {
-    window.scrollBy(0,5000);
-  }
+    let elem = document.getElementById("skills_title");
+    elem.scrollIntoView({block: "start", behavior: "smooth"});
+  };
   render() {
     return (
       <div className="Home">
@@ -61,26 +64,26 @@ class Home extends Component {
               <div id="aaron_estes">Aaron Estes</div>
             </div>
             <div id="dallas_tx">Dallas, TX</div>
-            <div id="email">aestescc@gmail.com</div>
-            <div id="email">github.com/A-R0n</div>
-            <div id="email">linkedin.com/in/A-R0n</div>
+            <a href='mailto:aestesc@gmail.com' id="email">aestesc@gmail.com</a>
+            <a href='https://www.github.com/a-r0n' id="email">github.com/A-R0n</a>
+            <a href='https://www.linkedin.com/in/a-r0n' id="email">linkedin.com/in/A-R0n</a>
           </div>
           <div className="navi">
-          <div onClick={() => this.toAbout()}>About</div>
-          <div onClick={() => this.toProjects()}>Projects</div>
-          <div onClick={() => this.toSkills()}>Skills</div>
+            <button onClick={() => this.toAbout()}>About</button>
+            <button onClick={() => this.toProjects()}>Projects</button>
+            <button onClick={() => this.toSkills()}>Skills</button>
+          </div>
         </div>
-        </div>
-       
-        <h1 className="about_me">About Me</h1>
+
+        <h1 id="about_me">About Me</h1>
         <div className="wrapper">
           <About />
         </div>
-        <div className="blue_space" />
-        <div className="projects">Projects</div>
+        {/* <div className="blue_space" /> */}
+        <div id="projects">Projects</div>
         <div className="blue_space" />
         <Projects />
-        <h1 className="skills_title">Skills</h1>
+        <h1 id="skills_title">Skills</h1>
         <div className="skills_container">
           <Skills />
         </div>
