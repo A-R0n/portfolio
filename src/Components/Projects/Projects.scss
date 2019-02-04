@@ -1,0 +1,88 @@
+.bar {
+    fill: #80cbc4;
+    
+  }
+  
+  p {
+    font-size: 12px;
+    line-height: 14px;
+    color: black;
+  }
+  
+  .axis path,
+  .axis line {
+      fill: none;
+      stroke: black;
+      shape-rendering: crispEdges;
+  }
+  
+  .axis text {
+      font-family: sans-serif;
+      font-size: 11px;
+  }
+  
+  .gdp {
+    font-weight: bold;
+    color: rgb(136, 2, 2);
+   
+  }
+  
+  .bar {
+    display: inline-block;
+    width: 70px;
+    background-color: teal;
+    margin-right: 2px;
+  }
+  
+  .tick {
+    background: pink;
+    border: 1px solid black;
+  }
+  
+  line {
+    stroke: gray;
+  }
+  
+  line#limit {
+    stroke: #FED966;
+    stroke-width: 3;
+    stroke-dasharray: 3 6;
+  }
+  
+  .grid path {
+    stroke-width: 0;
+  }
+  
+  .grid .tick line {
+    stroke: #9FAAAE;
+    stroke-opacity: 0.3;
+  }
+  text {
+    color: white;
+  }
+  
+  text.divergence {
+    font-size: 14px;
+    fill: #2F4A6D;
+  }
+  
+  text.value {
+    font-size: 14px;
+  }
+  
+  text.title {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  text.label {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+  }
+  
+  text.source {
+    font-size: 10px;
+  }
+  
+  
