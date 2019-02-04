@@ -82,7 +82,7 @@ class Home extends Component {
         {/* <div className="blue_space" /> */}
         <div id="projects">Projects</div>
         <div className="blue_space" />
-        <Projects />
+        {/* <Projects /> */}
         <h1 id="skills_title">Skills</h1>
         <div className="skills_container">
           <Skills />
