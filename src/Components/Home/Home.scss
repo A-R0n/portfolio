@@ -13,18 +13,27 @@
   src: url('../../HARRYP__.TTF') format('truetype');
 }
 
+// * {
+//   background: rgba(214, 211, 211, 0.671);
+// }
+
 .Home {
   width: 100%;
   height: 100vh;
-  background: rgb(39, 109, 150);
-  background-size: fill;
+  // background: rgba(214, 211, 211, 0.671);
   z-index: 0;
-  
+  position: relative;
   .Head {
     display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    border-bottom: 1px solid black;
+    background-image: url('https://www.uniquetoursfactory.com/private-tours/photos/page-image/tag/45/private-tours-paris-roaring-twenties.jpg');
+    background-size: 48%;
+    height: 22.5vh;
     .Avi {
-      width: 250px;
-      height: 250px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       z-index: 1;
       margin-top: 25px;
@@ -34,71 +43,47 @@
       border: 2px solid black;
     }
     .Head_Column {
-      margin-top: 5vh;
-      margin-left: 2vw;
       color: black;
       z-index: 5;
       display: flex;
+      flex-wrap: wrap;
       flex-direction: column;
-      justify-content: center;
-      height: 70%;
-      width: 71%;
-      
-      #aaron_estes {
-        font-size: 3em;
-        font-weight: bold;
-        // background: yellow;
-        width: 17vw;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 5px;
+      margin-left: 25px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.836);
+      height: 25vh;
+      .nav_bar {
+        display: flex;
+        justify-content: space-between;
+        #aaron_estes {
+          font-size: 2.5em;
+          font-weight: bold;
+          
+        }
       }
       #dallas_tx {
-        font-size: 2em;
-        // background: yellow;
+        font-size: 1.5em;
         width: 9vw;
       }
       #email {
-        // background: yellow;
         width: 12vw;
-      }
-      .skills {
-        display: flex;
-        flex-wrap: wrap;
-        #node, #js {
-          margin-left: 25vw;
-        }
-        #node,
-        #react,
-        #aws,
-        #d3,
-        #firebase,
-        #js,
-        #py,
-        #sass,
-        #css,
-        #html5
-         {
-          display: flex;
-          margin-top: 0;
-          z-index: 10000;
-          width: 140px;
-          height: 120px;
-          margin-top: -10vh;
-          margin-bottom: 11vh;
-        }
+        font-size: 12px;
       }
     }
-    
-    
   }
 
   .blue {
     height: 15vh;
-    background: rgb(39, 109, 150);
-    margin-top: -50px;
   }
 
-  .about_me {
+  #about_me {
+    padding-top: 100px;
+    margin: 0;
     z-index: 5;
-    color: white;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,60 +91,64 @@
     font-size: 3em;
   }
 
-  .projects {
-    margin-bottom: 0vh;
-    margin-top: -10px;
+  #projects {
+    padding-top: 100px;
+    margin: 0;
     z-index: 5;
-    color: white;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
     font-size: 3em;
-    background: rgb(39, 109, 150);
+    font-weight: bold;
   }
   .wrapper {
     display: flex;
     justify-content: center;
-  .Display_About {
-    padding-top: 10px;
-    width: 90vw;
-    background: rgba(24, 23, 23, 0.596);
-    display: flex;
-    flex-wrap: wrap;
-    // margin-left: 75px;
-    margin-top: 5vh;
-    // margin-bottom: 10vh;
-    div {
-      color: white;
-      font-weight: bold;
-      font-size: 2em;
-      font-family: 'comfortaa';
-    }
-    #p_one {
-      // margin-top: 0;
-      // margin-left: 5vw;
-    }
-    #p_two {
-      // margin-top: -30px;
+    .Display_About {
+      border: 1px solid black;
+      padding-left: 20px;
+      width: 90vw;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 50px;
+      background: white;
+      p {
+        font-weight: bold;
+        line-height: 1.5;
+        font-size: 2em;
+        font-family: 'comfortaa';
+        
+      }
     }
   }
-}
+
+  .blue_space {
+    height: 50px;
+  }
 
   .Display_Projects {
-    width: 100%;
-    background: rgb(39, 109, 150);
     z-index: 30;
-   
-    
+    width: 100vw;
     .header {
       display: flex;
-      
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
       .Name_Of_Project_and_Website {
-        width: 50vw;
         display: flex;
+        .smaller_div {
+          display: flex;
+          justify-content: space-between;
+          width: 68vw;
+          margin: auto;
+          margin-bottom: 25px;
+          border-bottom: 1px solid grey;
+        }
         h1 {
           font-family: 'stein';
+          padding-left: 10px;
         }
         a {
           color: black;
@@ -167,19 +156,22 @@
           align-items: center;
           justify-content: center;
           display: flex;
-          margin-left: 10px;
+          margin-left: 30px;
         }
       }
+      .spacing {
+        width: 100vw;
+        height: 10vh;
+        border-bottom: 2px solid black;
+      }
       .Name_Of_GroupProject_and_Website {
+        
         display: flex;
-        width: 62%;
-        margin-right: 0;
+        width: 50vw;
         #harryp {
           font-family: 'harryp';
-          font-size: 5em;
+          font-size: 2.25em;
           margin: 0;
-          position: sticky;
-          width: 54%;
         }
         a {
           color: black;
@@ -190,27 +182,50 @@
       }
     }
 
-    .spacing {
-      width: 100vw;
-      height: 5vh;
-      background: rgb(39, 109, 150);
-      border-bottom: 2px solid black;
+    .group_project_pic {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      max-width: 49.5vw;
+      max-height: 50vh;
     }
-
     .project_area {
       display: flex;
-      // flex-direction: column;
-      width: 100%;
+      flex-wrap: nowrap;
+      justify-content: center;
       .personal_project_pic {
         background-image: url('http://rrg-climbing-pics.s3-website-us-east-1.amazonaws.com/d90d1ab6-4570-407f-a2c8-c1f0049b5c35_ScreenShot2018-12-25at3.42.27PM.png');
         background-size: cover;
-        max-width: 40%;
+        max-width: 49.5vw;
         max-height: 50vh;
       }
-      #iphoneX {
-        width: 300px;
-        height: 500px;
+      .personal_project_pic2 {
+        background-image: url('http://rrg-climbing-pics.s3-website-us-east-1.amazonaws.com/d90d1ab6-4570-407f-a2c8-c1f0049b5c35_ScreenShot2018-12-25at3.42.27PM.png');
+        background-size: cover;
+        max-width: 35vw;
+        max-height: 40vh;
       }
+      .personal_project_pic3 {
+        background-image: url('http://rrg-climbing-pics.s3-website-us-east-1.amazonaws.com/d90d1ab6-4570-407f-a2c8-c1f0049b5c35_ScreenShot2018-12-25at3.42.27PM.png');
+        background-size: cover;
+        width: 350px;
+        height: 380px;
+        margin-top: 0px;
+        margin-left: 50px;
+        transform: rotate(90deg)
+      }
+
+      .personal_project_pic4 {
+        background-image: url('http://rrg-climbing-pics.s3-website-us-east-1.amazonaws.com/d90d1ab6-4570-407f-a2c8-c1f0049b5c35_ScreenShot2018-12-25at3.42.27PM.png');
+        background-size: cover;
+        width: 58vw;
+        height: 65vh;
+      }
+      #iphoneX {
+        width: 250px;
+        max-height: 50vh;
+      }
+     
       .project_info {
         display: flex;
         flex-direction: column;
@@ -221,10 +236,9 @@
           margin-left: 10px;
         }
         li {
+          border: 1px solid black;
           color: white;
           margin-left: 1vw;
-          margin-bottom: 1vh;
-          background: rgba(24, 23, 23, 0.596);
           list-style-position: outside;
           display: table-row;
         }
@@ -235,5 +249,130 @@
 
 #group_project_due_date {
   display: flex;
-  margin-left: -180px;
+}
+
+#skills_title {
+  margin: 0;
+  padding-top: 100px;
+  padding-bottom: 5vh;
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+}
+
+.skills_container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  border: 1px solid black;
+
+  .skills {
+    display: flex;
+    width: 75vw;
+    height: 60vh;
+    align-items: center;
+    #node,
+    #react,
+    #aws,
+    #d3,
+    #firebase,
+    #js,
+    #py,
+    #sass,
+    #css,
+    #html5 {
+      display: flex;
+      width: 10%;
+    }
+  }
+}
+
+.navi {
+  position: fixed;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 50vw;
+  margin-top: 20px;
+  margin-left: 5vw;
+  button {
+    background-color: rgb(94, 31, 23);
+    padding: 12px;
+    color: white;
+    border-radius: 15px;
+    width: 100px;
+    margin: 2px;
+  }
+  button:hover {
+    transition: all 0.3s;
+    transform: scale(1.1, 1.1);
+  }
+}
+
+.project_info_personal {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 1px solid white;
+  font-size: 2em;
+  width: 65vw;
+  border-radius: 20px;
+  background: white;
+  p {
+    margin: 50px;
+  }
+  li {
+    color: black;
+    padding: 5px 10px;
+    list-style-position: outside;
+    display: table-row;
+  }
+}
+
+.outer_div {
+  display: flex;
+  justify-content: center;
+  padding: 5vh;
+}
+
+.header_group {
+  border-bottom: 1px solid grey;
+  max-width: 65vw;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+    .smaller_div {
+      border-bottom: 1px solid grey;
+    }
+    #harryp {
+      font-family: 'harryp';
+      font-size: 2.75em;
+      margin: 0;
+      margin-left: -100px;
+    }
+    a {
+      color: black;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+h2 {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.inside {
+  // background: yellow;
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
 }
