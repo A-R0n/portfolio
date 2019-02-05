@@ -11,11 +11,7 @@ class About extends Component {
           getting into computer programming. After two of my closest friends
           encouraged me to read "Automate The Boring Stuff With Python", I
           decided to attend DevMountain's full-stack web development bootcamp. Now,
-<<<<<<< HEAD
-          my goal is to join a creative group of people in the workplace and
-=======
           my goal is to join a creative group of people in the workplace as I continue to
->>>>>>> a88f8cd75eb6b7a89429af2685683151a164ac01
           improve my skills as a developer.
         </p>
       </div>
