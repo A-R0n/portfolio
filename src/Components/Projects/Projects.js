@@ -1,9 +1,234 @@
 import React, { Component } from 'react';
 import './Projects.scss';
 import * as d3 from 'd3';
+import { geoOrthographic, geoMercator, geoPath } from 'd3-geo';
+import { feature } from 'topojson-client';
+import axios from 'axios';
+const {CENSUS_API_KEY} = process.env;
+const cors = require("cors");
+require('dotenv').config();
 
 class Projects extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      pop_: [],
+      worlddata: [],
+      cities: [
+        {
+          name: 'Tokyo',
+          coordinates: [139.6917, 35.6895],
+          population: 37843000
+        },
+        {
+          name: 'Jakarta',
+          coordinates: [106.865, -6.1751],
+          population: 30539000
+        },
+        {
+          name: 'Delhi',
+          coordinates: [77.1025, 28.7041],
+          population: 24998000
+        },
+        {
+          name: 'Manila',
+          coordinates: [120.9842, 14.5995],
+          population: 24123000
+        },
+        {
+          name: 'Seoul',
+          coordinates: [126.978, 37.5665],
+          population: 23480000
+        },
+        {
+          name: 'Shanghai',
+          coordinates: [121.4737, 31.2304],
+          population: 23416000
+        },
+        {
+          name: 'Karachi',
+          coordinates: [67.0099, 24.8615],
+          population: 22123000
+        },
+        {
+          name: 'Beijing',
+          coordinates: [116.4074, 39.9042],
+          population: 21009000
+        },
+        {
+          name: 'New York',
+          coordinates: [-74.0059, 40.7128],
+          population: 20630000
+        },
+        {
+          name: 'Guangzhou',
+          coordinates: [113.2644, 23.1291],
+          population: 20597000
+        },
+        {
+          name: 'Sao Paulo',
+          coordinates: [-46.6333, -23.5505],
+          population: 20365000
+        },
+        {
+          name: 'Mexico City',
+          coordinates: [-99.1332, 19.4326],
+          population: 20063000
+        },
+        {
+          name: 'Mumbai',
+          coordinates: [72.8777, 19.076],
+          population: 17712000
+        },
+        {
+          name: 'Osaka',
+          coordinates: [135.5022, 34.6937],
+          population: 17444000
+        },
+        {
+          name: 'Moscow',
+          coordinates: [37.6173, 55.7558],
+          population: 16170000
+        },
+        {
+          name: 'Dhaka',
+          coordinates: [90.4125, 23.8103],
+          population: 15669000
+        },
+        {
+          name: 'Greater Cairo',
+          coordinates: [31.2357, 30.0444],
+          population: 15600000
+        },
+        {
+          name: 'Los Angeles',
+          coordinates: [-118.2437, 34.0522],
+          population: 15058000
+        },
+        {
+          name: 'Bangkok',
+          coordinates: [100.5018, 13.7563],
+          population: 14998000
+        },
+        {
+          name: 'Kolkata',
+          coordinates: [88.3639, 22.5726],
+          population: 14667000
+        },
+        {
+          name: 'Buenos Aires',
+          coordinates: [-58.3816, -34.6037],
+          population: 14122000
+        },
+        {
+          name: 'Tehran',
+          coordinates: [51.389, 35.6892],
+          population: 13532000
+        },
+        {
+          name: 'Istanbul',
+          coordinates: [28.9784, 41.0082],
+          population: 13287000
+        },
+        { name: 'Lagos', coordinates: [3.3792, 6.5244], population: 13123000 },
+        {
+          name: 'Shenzhen',
+          coordinates: [114.0579, 22.5431],
+          population: 12084000
+        },
+        {
+          name: 'Rio de Janeiro',
+          coordinates: [-43.1729, -22.9068],
+          population: 11727000
+        },
+        {
+          name: 'Kinshasa',
+          coordinates: [15.2663, -4.4419],
+          population: 11587000
+        },
+        {
+          name: 'Tianjin',
+          coordinates: [117.3616, 39.3434],
+          population: 10920000
+        },
+        { name: 'Paris', coordinates: [2.3522, 48.8566], population: 10858000 },
+        {
+          name: 'Lima',
+          coordinates: [-77.0428, -12.0464],
+          population: 10750000
+        }
+      ]
+    };
+  }
+
+  componentDidMount() {
+    fetch('https://unpkg.com/world-atlas@1/world/110m.json').then(response => {
+      if (response.status !== 200) {
+        console.log(`There was a problem: ${response.status}`);
+        return;
+      }
+      response.json().then(worlddata => {
+        this.setState({worlddata: feature(worlddata, worlddata.objects.countries).features});
+      });
+    });
+    // axios.get(`http://api.census.gov/data/timeseries/poverty/histpov2?get=PCTPOV&time=2013&RACE=1&key=${CENSUS_API_KEY}`).then(response => {
+    //   console.log(response);
+    //   this.setState({
+    //     response: this.state.pop_
+    //   })
+    // })
+  }
+  projection = () => {
+    return geoMercator() // the type of map
+      .scale(200) // how big or small it is
+      .translate([800 / 2, 800 / 3.2]) //pixel (x, y) location of the projection center
+      .rotate([10]); // rotated projection 10 degrees right
+  };
+  handleCountryClick = async countryIndex => {
+    await console.log(
+      'Clicked on country: ',
+      this.state.worlddata[countryIndex]
+    );
+    await this.projection();
+  };
+  handleMarkerClick = async markerIndex => {
+    console.log('Marker: ', this.state.cities[markerIndex]);
+    await this.projection();
+  };
+
   render() {
+  const pop = this.state.pop_.map((elem, i) => {
+    return <div key={i}>{elem.population}</div>
+  })
+    const countries = this.state.worlddata.map((d, i) => {
+      return (
+        <path
+          key={`path-${i}`}
+          d={geoPath().projection(this.projection())(d)}
+          className="country"
+          fill={`rgba(38,50,56,${(1 / this.state.worlddata.length) * i})`}
+          stroke="#FFFFFF"
+          strokeWidth={0.5} // outline of the countries
+          onClick={() => this.handleCountryClick(i)}
+        />
+      );
+    });
+
+    const markers = this.state.cities.map((city, i) => {
+      return (
+        <circle
+          key={`marker-${i}`}
+          cx={this.projection()(city.coordinates)[0]}
+          cy={this.projection()(city.coordinates)[1]}
+          r={city.population / 3000000}
+          fill="#E91E63"
+          stroke="#FFFFFF"
+          className="marker"
+          onClick={() => this.handleMarkerClick(i)}
+        />
+      );
+    });
     var dataset = [
       [2008, -0.3],
       [2009, -2.8],
@@ -29,10 +254,20 @@ class Projects extends Component {
       { year: 2016, gdp: 18.707 },
       { year: 2017, gdp: 19.485 }
     ];
+
     var padding = 60;
     var barPadding = 2;
     var w = 500;
     var h = 300;
+
+    var csv = d3.csv('yourcsv.csv')
+      .then(function(data) {
+        // data is now whole data set
+        // draw chart in here!
+      })
+      .catch(function(error) {
+        // handle error
+      });
 
     // SCATTERPLOT
 
@@ -99,6 +334,8 @@ class Projects extends Component {
       .append('svg')
       .attr('width', w)
       .attr('height', h);
+
+    // making the circles
     svg
       .selectAll('circle')
       .data(dataset)
@@ -120,6 +357,7 @@ class Projects extends Component {
       .attr('height', function(d) {
         return d; // <-- Times four!
       });
+    // values of the data points, text format
     svg
       .selectAll('text')
       .data(dataset)
@@ -138,23 +376,27 @@ class Projects extends Component {
       .attr('font-size', '11px')
       .attr('fill', 'rgb(136, 2, 2)');
 
+    // creatig the x-axis
     svg
       .append('g')
       .attr('class', 'axis') //Assign "axis" class
       .attr('transform', 'translate(0,' + (h - padding) + ')')
       .call(xAxis);
 
+    // creating the y-axis
     svg
       .append('g')
       .attr('class', 'axis')
       .attr('transform', 'translate(' + padding + ',0)')
       .call(yAxis);
 
+    // the line that goes through each point
     svg
       .append('path')
       .datum(dataset)
       .attr('d', line);
 
+    // title
     svg
       .append('text')
       .attr('x', w / 2.2)
@@ -163,6 +405,7 @@ class Projects extends Component {
       .text(`USA Δ's in GDP - 10 year period`)
       .attr('fill', 'white');
 
+    // y-axis y label
     svg
       .append('text')
       .attr('x', -150)
@@ -172,6 +415,7 @@ class Projects extends Component {
       .text('%Δ in GDP')
       .attr('fill', 'white');
 
+    // X-axis year label
     svg
       .append('text')
       .attr('x', w / 1.2)
@@ -186,7 +430,10 @@ class Projects extends Component {
     const width2 = 1000 - 2 * margin2;
     const height2 = 600 - 2 * margin2;
 
-    const svg = d3.select('#area2').append('svg');
+    const svg = d3
+      .select('#area2')
+      .classed('bar_bar', true)
+      .append('svg');
     const chart = svg
       .append('g')
       .attr('transform', `translate(${margin2}, ${margin2})`);
@@ -325,7 +572,7 @@ class Projects extends Component {
       .attr('fill', 'white');
     return (
       <div className="Display_Projects">
-        {/* <div className="header">
+        <div className="header">
           <div className="Name_Of_Project_and_Website">
             <div className="smaller_div">
               <h1>D3 Economic Charts</h1>
@@ -334,27 +581,15 @@ class Projects extends Component {
             </div>
           </div>
         </div>
+        <div className='wrap_bar_graph'>
         
-        <div className="outer_div">
-          <div className="project_info_personal">
-            <li>
-              {' '}
-              Scatterplot (top left) displays changes in GDP in the USA over a 10 year period. Interactive Bar Graph (right) displays total GDP over the same period.
-            </li>
-            <li>
-              {' '}
-              Axes are scaled using D3's scaleLinear() and scaleBand() functions and displayed using axisLeft(), for the y-axis, and axisBottom(), for the x-axis.
-             </li>
-            <li>
-              {' '}
-              D3's select() method allows user to visualize differences in gdp (as percentages) with a horizontal line equal to the height of the appended 'rect' (CSS).
-            </li>
-            <li>
-              {' '}
-              World Map (bottom) is a geoMercator projection that generates an SVG path data string. The displays the population density in 21 major cities with circles that range in size depending on the population value.
-            </li>
-          </div>
+        <svg id="area2"></svg>
         </div>
+        <svg id="area1"></svg>
+        <svg className="world" width={1300} height={750} viewBox="0 0 1000 400">
+          <g className="countries">{countries}</g>
+          <g className="markers">{markers}</g>
+        </svg>
         <div className="header">
           <div className="Name_Of_Project_and_Website">
             <div className="smaller_div">
@@ -446,7 +681,7 @@ class Projects extends Component {
             </li>
             <li> Material UI implemented to make navigation more efficient.</li>
           </div>
-        </div> */}
+        </div>
       </div>
     );
   }

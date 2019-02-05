@@ -3,7 +3,6 @@ import './Home.scss';
 import About from '../About/About';
 import Projects from '../Projects/Projects';
 import Skills from '../Skills/Skills';
-import { Link } from 'react-router-dom';
 
 class Home extends Component {
   constructor(props) {
@@ -79,14 +78,15 @@ class Home extends Component {
         <div className="wrapper">
           <About />
         </div>
-        {/* <div className="blue_space" /> */}
-        <div id="projects">Projects</div>
-        <div className="blue_space" />
-        <Projects />
         <h1 id="skills_title">Skills</h1>
         <div className="skills_container">
           <Skills />
         </div>
+        <div id="projects">Projects</div>
+        <div className="blue_space" />
+        
+        <Projects />
+        
       </div>
     );
   }

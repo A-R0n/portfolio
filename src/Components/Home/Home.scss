@@ -127,19 +127,18 @@
 
   .Display_Projects {
     z-index: 30;
-    width: 100vw;
     height: 75vh;
     .header {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100vw;
       .Name_Of_Project_and_Website {
         display: flex;
+        justify-content: center;
         .smaller_div {
           display: flex;
           justify-content: space-between;
-          width: 68vw;
+          width: 65vw;
           margin: auto;
           margin-bottom: 25px;
           border-bottom: 1px solid grey;
@@ -374,4 +373,5 @@ h2 {
   margin: auto;
   align-items: center;
 }
+
 
