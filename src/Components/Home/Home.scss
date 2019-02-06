@@ -140,7 +140,6 @@
           justify-content: space-between;
           width: 65vw;
           margin: auto;
-          margin-bottom: 25px;
           border-bottom: 1px solid grey;
         }
         h1 {
@@ -258,13 +257,17 @@
 }
 
 .skills_container {
+  width: 100vw;
   display: flex;
+  margin: auto;
   flex-wrap: nowrap;
   justify-content: center;
   border: 1px solid black;
 
   .skills {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     width: 75vw;
     height: 60vh;
     align-items: center;
@@ -279,7 +282,7 @@
     #css,
     #html5 {
       display: flex;
-      width: 10%;
+      width: 18%;
     }
   }
 }
@@ -372,6 +375,16 @@ h2 {
   justify-content: center;
   margin: auto;
   align-items: center;
+}
+@media only screen and (max-width: 414px) {
+  
+  .skills {
+    max-height: 25vh;
+    min-width: 100vw;
+  }
+  .skills_container {
+    margin: auto;
+  }
 }
 
 

@@ -36,7 +36,7 @@ export default class Skills extends Component {
         />
         <img
           id="py"
-          src="https://www.andreabacciu.com/upload/2015/02/Python-Logo-PNG-Image.png"
+          src="http://dhirajkumarjha.com.np/wp-content/uploads/2018/01/Python.png"
           alt="python"
         />
         <img

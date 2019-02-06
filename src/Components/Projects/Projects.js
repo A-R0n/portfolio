@@ -3,10 +3,6 @@ import './Projects.scss';
 import * as d3 from 'd3';
 import { geoOrthographic, geoMercator, geoPath } from 'd3-geo';
 import { feature } from 'topojson-client';
-import axios from 'axios';
-const {CENSUS_API_KEY} = process.env;
-const cors = require("cors");
-require('dotenv').config();
 
 class Projects extends Component {
   constructor() {
@@ -169,7 +165,9 @@ class Projects extends Component {
         return;
       }
       response.json().then(worlddata => {
-        this.setState({worlddata: feature(worlddata, worlddata.objects.countries).features});
+        this.setState({
+          worlddata: feature(worlddata, worlddata.objects.countries).features
+        });
       });
     });
     // axios.get(`http://api.census.gov/data/timeseries/poverty/histpov2?get=PCTPOV&time=2013&RACE=1&key=${CENSUS_API_KEY}`).then(response => {
@@ -198,9 +196,9 @@ class Projects extends Component {
   };
 
   render() {
-  const pop = this.state.pop_.map((elem, i) => {
-    return <div key={i}>{elem.population}</div>
-  })
+    const pop = this.state.pop_.map((elem, i) => {
+      return <div key={i}>{elem.population}</div>;
+    });
     const countries = this.state.worlddata.map((d, i) => {
       return (
         <path
@@ -260,7 +258,8 @@ class Projects extends Component {
     var w = 500;
     var h = 300;
 
-    var csv = d3.csv('yourcsv.csv')
+    var csv = d3
+      .csv('yourcsv.csv')
       .then(function(data) {
         // data is now whole data set
         // draw chart in here!
@@ -330,7 +329,7 @@ class Projects extends Component {
       });
 
     var svg = d3
-      .select('#area1')
+      .select('#area_scatter')
       .append('svg')
       .attr('width', w)
       .attr('height', h);
@@ -431,7 +430,7 @@ class Projects extends Component {
     const height2 = 600 - 2 * margin2;
 
     const svg = d3
-      .select('#area2')
+      .select('#area_bar')
       .classed('bar_bar', true)
       .append('svg');
     const chart = svg
@@ -581,15 +580,37 @@ class Projects extends Component {
             </div>
           </div>
         </div>
-        <div className='wrap_bar_graph'>
-        
-        <svg id="area2"></svg>
+        <div className='flex_d3'>
+            <h6> Interactive Bar Graph of GDP <i>(D3.js)</i>
+            </h6>
+          </div>
+        <div className="wrap_bar_graph">
+          <svg id="area_bar" />
         </div>
-        <svg id="area1"></svg>
-        <svg className="world" width={1300} height={750} viewBox="0 0 1000 400">
-          <g className="countries">{countries}</g>
-          <g className="markers">{markers}</g>
-        </svg>
+        <div className='flex_d3'>
+        <h6>
+         Scatterplot of GDP <i>(D3.js)</i>
+          </h6>
+          </div>
+        <div className="wrap_bar_graph">
+          <div id="area_scatter" />
+        </div>
+        <div className='flex_d3'>
+        <h6>
+         Population Density in 20 major cities with a geoMercator map<i>(D3.js)</i>
+          </h6>
+          </div>
+        <div className="wrap_bar_graph">
+          <svg
+            className="world"
+            width={1600}
+            height={1000}
+            viewBox="0 0 800 400"
+          >
+            <g className="countries">{countries}</g>
+            <g className="markers">{markers}</g>
+          </svg>
+        </div>
         <div className="header">
           <div className="Name_Of_Project_and_Website">
             <div className="smaller_div">
@@ -613,28 +634,12 @@ class Projects extends Component {
         </div>
         <div className="outer_div">
           <div className="project_info_personal">
-            <li>
-              {' '}
-              Rock climbers now have the ability to find routes at the Red River
-              Gorge with ease as well as make detailed journal entries that they
-              can share with others.
-            </li>
-            <li>
-              {' '}
-              The search feature allows climber to access route information by
-              typing in the name, location, type, or difficulty.
-            </li>
-            <li>
-              {' '}
-              Routes can be added to a cart so that the climber can upload a
-              picture, write a description, and leave a review for each one.
-            </li>
-            <li>
-              {' '}
-              The profile page is used to display these journal entries in a
-              chronological order.
-            </li>
-            <li>Responsive design for an iPhoneX.</li>
+          <div className='flex_comment'>
+            <h6>Current Weather <i>(OpenWeatherMap API)</i></h6>
+            <h6>Image Upload <i>(Amazon AWS S3)</i></h6>
+            <h6>Post, Update, Delete, Get <i>(axios - PostgreSQL)</i></h6>
+            <h6>Deployment <i>(nginx - Digital Ocean VSI)</i></h6>
+            </div>
           </div>
         </div>
         <div className="spacing" />
@@ -658,28 +663,12 @@ class Projects extends Component {
         </div>
         <div className="outer_div">
           <div className="project_info_personal">
-            <li>
-              {' '}
-              Aspiring wizards are now able to attend Hogwarts School of
-              Witchcraft and Wizardry after signing up and taking the Sorting
-              Hat Quiz.
-            </li>
-            <li>
-              {' '}
-              Wizards can engage in dialogue in both private and public forums
-              by making axios calls to a SQL database.
-            </li>
-            <li>
-              {' '}
-              The chat room displays real-time data and is supported through
-              Firebase.
-            </li>
-            <li>
-              {' '}
-              Click on the golden snitch, animated with CSS, as it flies across
-              the screen to earn house points.
-            </li>
-            <li> Material UI implemented to make navigation more efficient.</li>
+          <div className='flex_comment'>
+            <h6>Private Chatroom <i>(Firebase)</i></h6>
+            <h6>Public Chatroom <i>(Node.js - PostgreSQL)</i></h6>
+            <h6>Golden Snitch Animation <i>(JS, HTML, SASS)</i></h6>
+            <h6>Multiple Choice Quiz <i>(JS, CSS)</i></h6>
+            </div>
           </div>
         </div>
       </div>
