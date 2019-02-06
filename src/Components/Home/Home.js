@@ -83,7 +83,8 @@ class Home extends Component {
           <Skills />
         </div>
         <div id="projects">Projects</div>
-	<div className="blue_space" />        
+        <div className="blue_space" />
+        
         <Projects />
         
       </div>
