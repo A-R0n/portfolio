@@ -1,0 +1,21 @@
+svg.world {
+	border: 1px solid black;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-basis: auto;
+	flex-grow: 0;
+	flex-shrink: 1;
+	flex-grow: 1;
+	flex: 1;
+}
+
+@media only screen and (max-width: 465px) {
+	.world {
+		height: 200px;
+		max-width: 36%;
+		flex-shrink: 1;
+	}
+}

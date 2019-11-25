@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <style>
-          path {
-            fill: none;
-            stroke: steelblue;
-            stroke-width: 1.5px;
-          }
-       
-          
-        </style>
-    <meta charset="utf-8" />
+  <head defer>
+    <style> 
+      #project_description {
+        color: black;
+      }
+    
+         
+    </style>
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="stylesheet" href="//rawgithub.com/Caged/d3-tip/master/examples/example-styles.css">
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -21,10 +19,18 @@
    
     <title>Portfolio</title>
     <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://d3js.org/d3-axis.v1.min.js"></script>
-    <script src="https://d3js.org/d3-time.v1.min.js"></script>
+   
+          </style> 
   </head>
   <body>
     <div id="root"></div>
+    <canvas id="graph" width="1" height="1" visibility='hidden'></canvas>
+    <svg id="choropleth" width="1" height="1" visibility='hidden' stroke-linejoin="round" stroke-linecap="round">
+        <defs>
+            <filter id="blur">
+              <feGaussianBlur stdDeviation="5"></feGaussianBlur>
+            </filter>
+          </defs>
+    </svg>
   </body>
-</html>
+  
