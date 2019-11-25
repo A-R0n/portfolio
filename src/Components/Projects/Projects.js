@@ -112,17 +112,6 @@ class Projects extends Component {
 					<div className="wrap_bar_graph">
 						<GDP />
 					</div>
-					<div className="header">
-						<div className="Name_Of_Project_and_Website">
-							<div className="smaller_div">
-								<h1>TopoJson Map - (D3.js)</h1>
-								<a id="the_code" href="https://github.com/A-R0n/d3-world">
-									The Code
-								</a>
-								<h2>Dec 5th, 2018</h2>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 		);
