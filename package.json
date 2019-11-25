@@ -21,6 +21,7 @@
     "sass": "^1.23.7",
     "topojson-client": "^3.0.0"
   },
+  "proxy": "http://localhost:8897",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
