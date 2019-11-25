@@ -75,20 +75,6 @@ class Home extends Component {
 					{' '}
 					--- Graphs and Maps located in 'Projects' were designed for desktop. -----------------
 				</p>
-				<div className="directory">
-					<div className="each_section">
-						<img className="yin_yang" src="https://image.flaticon.com/icons/svg/140/140117.svg" />
-						<div>About Me</div>
-					</div>
-					<div className="each_section">
-						<img className="yin_yang" src="https://image.flaticon.com/icons/svg/39/39740.svg" />
-						<div>Skills</div>
-					</div>
-					<div className="each_section">
-						<img className="yin_yang" src="https://image.flaticon.com/icons/svg/30/30567.svg" />
-						<div>Projects</div>
-					</div>
-				</div>
 				<div className="wrapper">
 					<About />
 				</div>
