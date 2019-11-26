@@ -10,7 +10,7 @@
 	margin: auto;
 	display: flex;
 	background: #eae6da;
-	flex-basis: 410px;
+	flex-basis: 650px;
 	flex-shrink: 1;
 	overflow: scroll;
 }
