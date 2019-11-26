@@ -40,11 +40,11 @@ class Projects extends Component {
 								<h2>March 24th, 2019</h2>
 							</div>
 						</div>
-					</div>
-					<p id="project_description">
-						How do I maximize the use of space in my garage given the following constraints...
-					</p>
-					<Garage />
+				</div>
+				<p id="project_description">
+				How do I maximize the use of space in my garage?
+				</p>
+				<Garage />
 					<div className="header">
 						<div className="Name_Of_Project_and_Website">
 							<div className="smaller_div">

@@ -1,0 +1,107 @@
+.Garage {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	max-width: 960px;
+	margin: auto;
+	flex-wrap: wrap;
+}
+.garage {
+	margin: auto;
+	display: flex;
+	background: #eae6da;
+	flex-basis: 410px;
+	flex-shrink: 1;
+	overflow: scroll;
+}
+
+.innerGarage {
+	fill: #eae6da;
+}
+
+.mainWall {
+	stroke: black;
+	fill: rgba(110, 84, 84, 0.5);
+}
+
+.containerMount {
+    stroke: white;
+    fill: white;
+    stroke-width: 2px;
+    z-index: 0;
+}
+
+#startingPoint {
+	stroke-width: 2px;
+	fill: red;
+	stroke: black;
+}
+
+path.floor, path.ceiling {
+	fill: rgb(133, 131, 125);
+	stroke: black;
+	stroke-width: 1px;
+}
+
+.doorWay {
+	fill: rgb(241, 241, 229);
+	stroke: black;
+	background: #eae6da;
+}
+
+.doorEdge {
+    fill: rgba(128, 128, 128, 0.459);
+    stroke: black;
+	stroke-linecap: round;
+}
+
+.doorFace {
+    fill: rgba(190, 174, 159, 0.719);
+    stroke: black;
+	stroke-dasharray: 1000;
+	stroke-width: .7;
+	stroke-dashoffset: 1000;
+	animation: dash 5s linear forwards;
+}
+.doorHandle {
+	fill: rgba(0, 0, 0, 0.5);
+	stroke: black;
+}
+
+#hammer {
+	width: 45px;
+}
+
+#screws {
+	width: 15px;
+}
+
+#tapemeasure {
+	width: 25px;
+}
+
+#chainsaw {
+	width: 70px;
+}
+
+#saw {
+	width: 60px;
+}
+
+@keyframes dash {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+@media only screen and (max-width: 475px) {
+    .Garage {
+		margin: 20px;
+		max-width: 430px;
+		margin: auto;
+	}
+	.garage {
+			flex-basis: 370px;
+			margin-bottom: 10px;
+	}
+}
