@@ -73,7 +73,7 @@ class Home extends Component {
 				</div>
 				<p id="disclaimer">
 					{' '}
-					--- Graphs and Maps located in 'Projects' were designed for desktop. -----------------
+					--- Functionality of graphs are limited with mobile devices. -----------------
 				</p>
 				<div className="wrapper">
 					<About />
