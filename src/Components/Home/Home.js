@@ -4,54 +4,6 @@ import About from '../About/About';
 import Projects from '../Projects/Projects';
 
 class Home extends Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			about: false,
-			projects: false,
-			quotes: false
-		};
-	}
-
-	user_clicks_about = () => {
-		this.setState({
-			about: !this.state.about,
-			projects: false,
-			quotes: false
-		});
-	};
-
-	user_clicks_projects = () => {
-		this.setState({
-			about: false,
-			projects: !this.state.projects,
-			quotes: false
-		});
-	};
-
-	user_clicks_quotes = () => {
-		this.setState({
-			about: false,
-			projects: false,
-			quotes: !this.state.quotes
-		});
-	};
-
-	toAbout = () => {
-		let elem = document.getElementById('about_me');
-		elem.scrollIntoView({ block: 'start', behavior: 'smooth' });
-	};
-
-	toProjects = () => {
-		let elem = document.getElementById('projects');
-		elem.scrollIntoView({ block: 'start', behavior: 'smooth' });
-	};
-
-	toSkills = () => {
-		let elem = document.getElementById('skills_title');
-		elem.scrollIntoView({ block: 'start', behavior: 'smooth' });
-	};
 	render() {
 		return (
 			<div className="Home">

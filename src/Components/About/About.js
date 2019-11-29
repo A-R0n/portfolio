@@ -22,11 +22,12 @@ class About extends Component {
 				</h1>
 				<div className="Display_About">
 					<p id={this.state.expanded === true ? 'p_one_display' : 'p_one'}>
-						I'm interested in utilizing my educational background in Economics and Full-Stack Web
-						Developement within a productive group of individuals. The following quote contains Truth that I
-						will always believe in: "He will win whose army is animated by the same spirit throughout all
-						its ranks." - (3.17 The Art of War, Sun Tzu). To me, victory is nothing if you don't love what
-						you are doing.
+						I am currently in the process of finishing out an internship where I have spent six
+						months writing test suites in the JUnit (Java) Framework. My goal is to continue on this path and
+						become a software engineer.
+						The following quote contains truth that I will always believe in:
+						"He will win whose army is animated by the same spirit throughout all its ranks." - (3.17 The
+						Art of War, Sun Tzu). To me, winning means nothing if you don't love what you are fighting for.
 					</p>
 				</div>
 			</div>

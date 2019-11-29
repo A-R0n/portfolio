@@ -291,7 +291,7 @@ export default class Garage extends Component {
 		return (
 			<div className="Garage">
 				<Form handleChange={this.props.handleChange} handleSubmit={this.props.handleSubmit} />
-				<svg className="garage" />
+				<svg className="garage" width={this.state.width} height={this.state.height} viewBox="0,0,700,440"/>
 			</div>
 		);
 	}
