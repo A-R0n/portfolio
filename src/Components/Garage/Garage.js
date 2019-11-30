@@ -114,9 +114,9 @@ export default class Garage extends Component {
 			lineMount = d3.line().x((d) => d[0]).y((d) => d[1]);
 
 		selection
-			.on('mousedown', function() {
+			.on('mousedown' || 'touchstart', function() {
 				keepMount = true;
-				mouseCoords = d3.mouse(this);
+				mouseCoords = d3.mouse(this) || d3.touches(this);
 
 				pathMount = d3
 					.select('g.mountGroup')
@@ -125,18 +125,21 @@ export default class Garage extends Component {
 					.attr('d', lineMount([ mouseCoords, mouseCoords ]));
 				makeCircle(mouseCoords);
 			})
-			.on('mousemove', function() {
+			.on('mousemove' || 'touchmove', function() {
 				if (keepMount) {
 					var Line = lineMount([
 						mouseCoords,
 						d3.mouse(this).map(function(x) {
+							return x - 1;
+						}),
+						d3.touches(this).map(function(x){
 							return x - 1;
 						})
 					]);
 					pathMount.attr('d', Line);
 				}
 			})
-			.on('mouseup', function() {
+			.on('mouseup' || 'touchend', function() {
 				keepMount = false;
 			});
 		function makeCircle(mouseCoords) {
