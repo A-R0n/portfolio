@@ -28,23 +28,7 @@ class Projects extends Component {
 					Projects
 				</div>
 				<div className={this.state.expanded === true ? 'display_my_projects' : 'dont_display_projects'}>
-				<div className="header">
-						<div className="Name_Of_Project_and_Website">
-							<div className="smaller_div">
-								<h1>
-									Spatial Constraints <i>(D3.js)</i>
-								</h1>
-								<a id="the_code" href="https://github.com/A-R0n/">
-									The Code
-								</a>
-								<h2>March 24th, 2019</h2>
-							</div>
-						</div>
-				</div>
-				<p id="project_description">
-				How do I maximize the use of space in my garage?
-				</p>
-				<Garage />
+
 					<div className="header">
 						<div className="Name_Of_Project_and_Website">
 							<div className="smaller_div">
