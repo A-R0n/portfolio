@@ -4,7 +4,7 @@ import PPF from '../../Components/PPF/PPF'
 import ForceDirected from '../../Components/ForceDirected/ForceDirected';
 import Choropleth from '../Choropleth/Choropleth';
 import GDP from '../../Components/GDP/GDP';
-import Garage from '../../Components/Garage/Garage';
+import Crypto from '../../Components/Crypto/Crypto';
 
 class Projects extends Component {
 	constructor() {
@@ -28,7 +28,7 @@ class Projects extends Component {
 					Projects
 				</div>
 				<div className={this.state.expanded === true ? 'display_my_projects' : 'dont_display_projects'}>
-
+				<Crypto />
 					<div className="header">
 						<div className="Name_Of_Project_and_Website">
 							<div className="smaller_div">

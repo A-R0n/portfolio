@@ -1,0 +1,56 @@
+.focus {
+    opacity: 0.7;
+}
+
+.focus circle {
+    fill: none;
+    stroke: black;
+}
+
+.focus line {
+    fill: none;
+    stroke: black;
+    stroke-width: 1.5;
+    stroke-dasharray: 3.3;
+}
+
+.dates {
+    border: .5px solid #c3c3c3;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    align-content: center;
+    justify-content: space-between;
+    margin-left: 60px;
+    max-width: 620px;
+}
+
+#from_date {
+    padding-left: 15px;
+}
+
+#to_date {
+    padding-right: 15px;
+}
+
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 2;
+}
+
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
+
+#x_axis_text, #y_axis_text, #title_text {
+    font-size: 20px;
+    fill: #411C14;
+}
+
+.x_axis .tick {
+    font-size: 0.65em;
+}

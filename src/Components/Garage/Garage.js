@@ -108,7 +108,6 @@ export default class Garage extends Component {
 
 	allowMountDesign = (selection) => {
 		var mouseCoords,
-			circle,
 			pathMount,
 			keepMount = false,
 			lineMount = d3.line().x((d) => d[0]).y((d) => d[1]);
@@ -163,7 +162,7 @@ export default class Garage extends Component {
 		}
 		function ended(volumeTool) {
 			var spaceUsed = 0;
-			var textInContainer = d3.select('#space').data([ volumeTool ]).enter();
+			d3.select('#space').data([ volumeTool ]).enter();
 			d3.select('#space').exit().remove();
 			d3.select('#space').text((volumeTool) => {
 				return `${volumeTool + spaceUsed}` + `%`;
