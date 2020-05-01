@@ -3,14 +3,12 @@ p#p_one {
 }
 
 p#p_one_display {
-	
 	margin: auto;
 	padding: 25px;
 	color: #5f5948;
 	font-weight: bold;
 	line-height: 1.5;
-	font-size: 2em;
-	font-family: 'comfortaa';
+	font-size: 1.5em;
 }
 
 @media only screen and (max-width: 465px) {
@@ -23,15 +21,6 @@ p#p_one_display {
 			align-items: center;
 			justify-content: center;
 		border-left: 1px solid black;
-	}
-	#skills_title {
-		margin: auto;
-		width: 365px;
-		font-size: 2em;
-		height: 50px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 	}
 	p#p_one_display {
 		padding: 10px 0px;

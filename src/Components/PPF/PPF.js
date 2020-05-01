@@ -56,8 +56,8 @@ class PPF extends Component {
 				return d.capitalGoods + 200;
 			})
 		]);
-		const yScale = d3.scaleLinear().range([height, 0]).domain([70, 320]);
-		const xScale = d3.scaleLinear().range([0, width]).domain([70, d3.max(this.state.data, function(d) {
+		d3.scaleLinear().range([height, 0]).domain([70, 320]);
+		d3.scaleLinear().range([0, width]).domain([70, d3.max(this.state.data, function(d) {
 			return d.capitalGoods + 220;
 		})]);
 
@@ -90,25 +90,25 @@ class PPF extends Component {
 				return y(d.capitalGoods);
 			})
 			.curve(d3.curveCardinal);
-		var line = chart.append('path').data([ this.state.data ]).attr('class', 'line').attr('d', valueline);
-		const xAxis = chart.append('g').attr('transform', 'translate(0,' + height + ')').call(d3.axisBottom(x));
-		const yAxis = chart.append('g').call(d3.axisLeft(y));
-		const yAxis_grid = chart
+		chart.append('path').data([ this.state.data ]).attr('class', 'line').attr('d', valueline);
+		chart.append('g').attr('transform', 'translate(0,' + height + ')').call(d3.axisBottom(x));
+		chart.append('g').call(d3.axisLeft(y));
+		chart
 			.append('g')
 			.attr('class', 'grid')
 			.attr('transform', `translate(0, ${height})`)
 			.call(d3.axisBottom().scale(x).tickSize(-height, 0, 0).tickFormat(''));
-		const xAxis_grid = chart
+		chart
 			.append('g')
 			.attr('class', 'grid')
 			.call(d3.axisLeft().scale(y).tickSize(-width, 0, 0).tickFormat(''));
-		const pareto_innefficient_area = chart
+		chart
 			.append('path')
 			.data([ this.state.data ])
 			.attr('class', 'inefficient')
 			.attr('d', area);
 
-		var click = chart.on('click', function() {
+		chart.on('click', function() {
 			if (d3.event.defaultPrevented) return;
 			i++;
 			// Extract the click location\
@@ -116,7 +116,7 @@ class PPF extends Component {
 				p = { x: point[0], y: point[1] };
 
 			// Append a new point
-			var newCircle = svg
+			svg
 				.append('circle')
 				.attr('cx', p.x + 50)
 				.attr('cy', p.y + 8)
@@ -144,7 +144,7 @@ class PPF extends Component {
 		function onDrag() {
 			var newX = d3.event.x;
 			var newY = d3.event.y;
-			var newDot = d3.select(this).attr('cx', newX).attr('cy', newY).attr('id', 'hehe');
+			d3.select(this).attr('cx', newX).attr('cy', newY).attr('id', 'hehe');
 		}
 
 		function onEnd() {
@@ -179,7 +179,7 @@ class PPF extends Component {
 			.text('Pareto Inefficient')
 			.attr('fill', 'black');
 
-		var dots = chart
+		chart
 			.selectAll('.dot')
 			.data(this.state.data)
 			.enter()
@@ -286,7 +286,7 @@ class PPF extends Component {
 				return y(d.capitalGoods) + i * 0.95;
 			})
 			.curve(d3.curveCardinal);
-		const shift = d3
+		d3
 			.select('#secret')
 			.transition()
 			.duration(1000)
@@ -302,7 +302,7 @@ class PPF extends Component {
 	};
 
 	render() {
-		var title = [ [ 'Econ' ], [ 'Study' ], [ 'Tools' ] ];
+
 		return (
 			<div className="PPF">
 				<svg id="ppf" className="ppf_graph" width={400} height={350} viewBox="0 0 400 350" />

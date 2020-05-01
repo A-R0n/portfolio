@@ -55,7 +55,7 @@ export default class GDP extends Component {
 					.attr('width', xScale_2.bandwidth() + 10);
 
 				const y = yScale_2(actual.gdp);
-				var line = chart
+				chart
 					.append('line')
 					.attr('id', 'limit')
 					.attr('x1', 0)

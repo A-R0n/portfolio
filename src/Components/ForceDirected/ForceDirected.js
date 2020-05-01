@@ -3,9 +3,6 @@ import { range, forceSimulation, forceManyBody, forceLink, select, drag, event }
 import './ForceDirected.scss';
 
 export default class ForceDirected extends Component {
-	constructor() {
-		super();
-	}
 	render() {
 		var n = 12;
 

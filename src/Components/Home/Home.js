@@ -12,13 +12,13 @@ class Home extends Component {
 					<div className="Head_Column">
 						<div id="aaron_estes">Aaron Estes</div>
 						<div id="dallas_tx">Dallas, TX</div>
-						<a href="mailto:aestesc@gmail.com" target="_blank" id="email">
+						<a href="mailto:aestesc@gmail.com" id="email">
 							aestesc@gmail.com
 						</a>
-						<a href="https://www.github.com/a-r0n" target="_blank" id="email">
+						<a href="https://www.github.com/a-r0n" id="email">
 							github.com/A-R0n
 						</a>
-						<a href="https://www.linkedin.com/in/a-r0n" target="_blank" id="email">
+						<a href="https://www.linkedin.com/in/a-r0n" id="email">
 							linkedin.com/in/A-R0n
 						</a>
 					</div>
